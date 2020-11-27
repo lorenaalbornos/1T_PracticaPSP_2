@@ -24,7 +24,7 @@ Para poder usar esta aplicación debes hacer lo siguiente:
 
 
 ## Construido con 🛠️
-* IntelliJ IDEA 2020.2.3 
+* IntelliJ IDEA 2020.2.2 
 * Versión de Java 8  
 * MySQL  
 
