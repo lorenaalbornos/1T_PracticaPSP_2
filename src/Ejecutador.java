@@ -38,20 +38,20 @@ public class Ejecutador {
         iLecturaSecuencial = System.currentTimeMillis();
         gBbdd.lectura();
         fLecuraSecuencial = System.currentTimeMillis();
-        System.out.println("La suma de los ingresos es de: " + gBbdd.getSumaIngresos());
+        System.out.println("El total de la suma de los ingresos es de: " + gBbdd.getSumaIngresos());
         System.out.println("El tiempo en leer los registros de forma secuencial es de: " + (fLecuraSecuencial - iLecturaSecuencial) + " milisegundos.");
     }
 
     public static void lecturaConcurrente() {
         GestorBbdd gBbdd = new GestorBbdd();
         Hilo hilo = null;
-        gBbdd.lectura();//Para saber cuantos registros hay en total
+        gBbdd.lectura();//Para saber cuántos registros hay en total.
         int auxInicial = 0, auxFinal = 0;
         long iLecturaConcurrente, fLecturaConcurrente;
         int nRegistros = gBbdd.getNumeroRegistros();
         int registrosPorHilo = nRegistros / N_HILOS;
 
-        //Empezamos a contar el tiempo
+        //Empezamos a contar el tiempo.
         iLecturaConcurrente = System.currentTimeMillis();
         for (int i = 1; i <= N_HILOS; i++) {
             auxInicial = registrosPorHilo * i + 1;
@@ -66,9 +66,9 @@ public class Ejecutador {
                 ex.printStackTrace();
             }
         }
-        //terminamos contar tiempo
+        //terminamos contar tiempo.
         fLecturaConcurrente = System.currentTimeMillis();
-        System.out.println("La suma de los ingresos es de: " + gBbdd.getSumaIngresos());
+        System.out.println("El total de la suma de los ingresos es de: " + gBbdd.getSumaIngresos());
         System.out.println("El tiempo en leer los registros de forma concurrente es de: " + (fLecturaConcurrente - iLecturaConcurrente) + " milisegundos.");
     }
 }

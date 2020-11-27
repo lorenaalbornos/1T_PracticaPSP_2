@@ -1,4 +1,5 @@
 public class Hilo extends Thread{
+
     GestorBbdd gBbdd = new GestorBbdd();
     private int auxInicial;
     private int auxFinal;
