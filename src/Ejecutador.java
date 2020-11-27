@@ -26,8 +26,8 @@ public class Ejecutador {
     }
 
     public static void menu(){
-        System.out.println("1. Leer registros de forma secuencial");
-        System.out.println("2. Leer registros de forma concurrente con 5 hilos");
+        System.out.println("1. Mostrar la suma de los ingresos de forma secuencial");
+        System.out.println("2. Mostrar la suma de los ingresos de forma concurrente con 5 hilos");
         System.out.println("0. Salir");
         System.out.print("Introduzca opción: ");
     }
